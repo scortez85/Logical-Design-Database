@@ -1,9 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-	// Use this for initialization
+	public void changeMenu (string menuId)
+    {
+        if (menuId.Equals("Play"))
+            SceneManager.LoadScene(1);
+        else if (menuId.Equals("Quit"))
+            Application.Quit();
+            
+    }
 	void Start () {
 	
 	}
