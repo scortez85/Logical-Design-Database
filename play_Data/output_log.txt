@@ -2,26 +2,33 @@ Initialize engine version: 5.4.1f1 (649f48bbbf0f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon R9 200 Series (ID=0x6798)
-    Vendor:   ATI
-    VRAM:     3072 MB
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     1136 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.078 seconds
-Platform assembly: C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Steven\Source\Repos\Logical-Design-Database\play_Data\Managed\System.dll (this message is harmless)
-desktop: 2560x1440 60Hz; virtual: 2560x1440 at 0,0
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Mono.Data.Sqlite.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\MySql.Data.dll (this message is harmless)
+Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\MySql.Data.dll into Unity Child Domain
+- Completed reload, in  0.213 seconds
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 0.781502 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 22a4 -> priority: 1 
-  Thread -> id: 26c0 -> priority: 1 
+UnloadTime: 1.251743 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 4c8c -> priority: 1 
