@@ -14,6 +14,8 @@ public class forkliftMove : NetworkBehaviour {
         speed = 30f;
         turnSpeed = 50f;
         lifterSpeed = 10;
+        if (isLocalPlayer)
+            GameObject.Find("FollowThridPersonCam").GetComponent<thirdCam>().player = gameObject;
 	
 	}
 	
