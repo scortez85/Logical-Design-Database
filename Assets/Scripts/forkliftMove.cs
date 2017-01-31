@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 
-public class forkliftMove : MonoBehaviour {
+public class forkliftMove : NetworkBehaviour {
 
     private float speed, turnSpeed,lifterSpeed,lifterTopConstraint;
     private float lifterAngle;
@@ -18,14 +19,15 @@ public class forkliftMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (!isLocalPlayer)
+            return;
         //raycast
         RaycastHit hit;
         Vector3 forward = rayCastPt.transform.TransformDirection(Vector3.forward) * 10;
 
         if (Physics.Raycast(rayCastPt.transform.position,forward,out hit,10))
         {
-            Debug.Log(hit.collider.gameObject.tag); //test
+            //Debug.Log(hit.collider.gameObject.tag); //test
             if (hit.collider.gameObject.tag.Equals("Crate"))
             {
                 Destroy(hit.collider.gameObject);

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class palletProp : MonoBehaviour {
 
-    public GameObject pallet, propPallet;
+    public GameObject pallet;
 	void Start () {
 	
 	}
@@ -14,11 +14,16 @@ public class palletProp : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider col)
     {
-        if (propPallet.activeSelf == true)
+        Debug.Log(col.name);
+        //if (gameObject.activeSelf == true)
         {
             Instantiate(pallet, col.gameObject.transform.position, col.gameObject.transform.rotation);
-            propPallet.SetActive(false);
+            gameObject.SetActive(false);
         }
         //gameObject.SetActive(false);
+    }
+    void OnCollisionEnter(Collision col)
+    {
+        Debug.Log(col.gameObject.name);
     }
 }

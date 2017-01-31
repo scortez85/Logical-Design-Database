@@ -11,23 +11,23 @@ public class netMan : NetworkBehaviour
         netManager = GetComponent<NetworkManager>();
 
     }
+    
 
     // Update is called once per frame
     void Update()
     {
 
     }
-    public void startServer()
-    {
-        netManager.StartServer();
-    }
+  
     public void startHost()
     {
         netManager.StartHost();
+
     }
     public void startClient()
     {
         netManager.StartClient();
+        //GameObject.Find("menuUI").GetComponent<menuUI>().hideNetUI();
     }
 
 }
