@@ -23,9 +23,12 @@ public class dataBase : MonoBehaviour {
         string scores = "";
         for (int k=0;k<sortedDatabase.Count;k++)
         {
+            Vector3 newPos = highScoreText.transform.position;
             scoreText[k] = (Text)Instantiate(highScoreText, highScoreText.gameObject.transform.position, highScoreText.gameObject.transform.rotation);
             scoreText[k].text = sortedDatabase[k].ToString();
             scoreText[k].transform.parent = highScoreText.transform;
+            newPos.y -= 25;
+            scoreText[k].transform.position = newPos;
             //scores += sortedDatabase[k].ToString();
         }
         highScoreText.text = scores;

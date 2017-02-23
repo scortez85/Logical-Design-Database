@@ -22,26 +22,38 @@ Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play
 Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
 Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\MySql.Data.dll (this message is harmless)
 Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\MySql.Data.dll into Unity Child Domain
-- Completed reload, in  0.075 seconds
+- Completed reload, in  0.442 seconds
 Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.156803 ms
+UnloadTime: 22.758045 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: dc8 -> priority: 1 
+  Thread -> id: 92d8 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.967060 ms
+UnloadTime: 2.794292 ms
 
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 6157.
-Total: 2.142544 ms (FindLiveObjects: 0.304061 ms CreateObjectMapping: 0.115466 ms MarkObjects: 0.642335 ms  DeleteObjects: 1.079825 ms)
+Total: 4.915457 ms (FindLiveObjects: 0.419101 ms CreateObjectMapping: 0.118887 ms MarkObjects: 3.117598 ms  DeleteObjects: 1.258158 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at thirdCam.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
+
+newFork 1(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+newFork 1(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+newFork 1(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Cube
  
