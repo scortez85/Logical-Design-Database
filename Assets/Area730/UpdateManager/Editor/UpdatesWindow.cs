@@ -47,7 +47,7 @@ namespace Area730.UpdatesManager
         [MenuItem("Area730/Check updates")]
         private static void CheckUpdates()
         {
-            Debug.Log("[Area730] Started checking updates...");
+            //Debug.Log("[Area730] Started checking updates...");
 
             www = new WWW(pluginDataUrl);
             EditorApplication.update += CheckPlugins;
@@ -61,7 +61,7 @@ namespace Area730.UpdatesManager
 
                 if (www.error != null)
                 {
-                    Debug.Log("[Area730] Error reading remote list");
+                    //Debug.Log("[Area730] Error reading remote list");
                     return;
                 }
 

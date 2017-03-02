@@ -7,84 +7,112 @@ using Mono.Security.Cryptography;
 using UnityEngine.UI;
 
 public class dataBase : MonoBehaviour {
-    public Text highScoreText;
-    StreamReader dataBaseIn;
-    StreamWriter dataBaseOut;
-    Hashtable Database;
-    List<int> sortedDatabase;
-    public Text[] scoreText;
-    void Start() {
-        scoreText = new Text[10];
-        sortedDatabase = new List<int>();
-        Database = new Hashtable();
-        //highScoreText.text = "Steven : 50";
-       
-       loadDataBase();
-        string scores = "";
-        for (int k=0;k<sortedDatabase.Count;k++)
+    public class Player
+    {
+        private string fName,lName,gender,email,password;
+        private int score,id;
+
+        public Player(string fName,string lName,int score,string email,string password,int ID)
         {
-            Vector3 newPos = highScoreText.transform.position;
-            scoreText[k] = (Text)Instantiate(highScoreText, highScoreText.gameObject.transform.position, highScoreText.gameObject.transform.rotation);
-            scoreText[k].text = sortedDatabase[k].ToString();
-            scoreText[k].transform.parent = highScoreText.transform;
-            newPos.y -= 25;
-            scoreText[k].transform.position = newPos;
-            //scores += sortedDatabase[k].ToString();
+            this.fName = fName;
+            this.lName = lName;
+            this.score = score;
+            this.email = email;
+            this.password = password;
+            this.id = ID;
         }
-        highScoreText.text = scores;
+        public string getFname()
+        {
+            return this.fName;
+        }
+        public string getLname()
+        {
+            return this.lName;
+        }
+        public string getGender()
+        {
+            return this.gender;
+        }
+        public string getEmail()
+        {
+            return this.email;
+        }
+        public string getPass()
+        {
+            return this.password;
+        }
+        public int getScore()
+        {
+            return this.score;
+        }
+        public int getId()
+        {
+            return this.id;
+        }
 
     }
-    private void reverseAndRetrieveData()
-    {
-        foreach (int k in Database.Values)
-            sortedDatabase.Add(k);
-        sortedDatabase.Sort();
-        sortedDatabase.Reverse();
-    }
-    public void addRecord(string name, int value)
-    {
-        Database.Add(name, value);
-        sortedDatabase.Clear();
-        reverseAndRetrieveData();
+    public List<Player> playerList = new List<Player>();
 
-    }
-	public void loadDataBase()
+    void Start()
     {
-        dataBaseIn = new StreamReader("Assets\\Database.dat");
+        loadDataBase();
+       
+        
+        //SaveDataBase();
+    }
+
+    public void loadDataBase()
+    {
+        StreamReader dataBaseIn = new StreamReader("Assets\\Database.dat");
         string myLine;
 
         while ((myLine = dataBaseIn.ReadLine()) != null)
-            addRecord(myLine.Split(':')[0], int.Parse(myLine.Split(':')[1]));
+            playerList.Add(new global::dataBase.Player(myLine.Split(':')[0], myLine.Split(':')[1], int.Parse(myLine.Split(':')[2]), myLine.Split(':')[3], myLine.Split(':')[4], int.Parse(myLine.Split(':')[5])));
         dataBaseIn.Close();
-
+        playerList = SortedData();
     }
-    public void saveDataBase()
+    public void newPlayer(string fName, string lName, int score, string email, string password, int ID)
     {
-        dataBaseOut = new StreamWriter("Assets\\Database.dat");
-        for (int k = 0; k < sortedDatabase.Count; k++)
-            dataBaseOut.WriteLine(sortedDatabase[k].ToString() + ":" + Database[sortedDatabase[k].ToString()]);
-        dataBaseOut.Close();
+        playerList.Add(new global::dataBase.Player(fName, lName, score, email, password, ID));
+        playerList = SortedData();
     }
-	// Update is called once per frame
-	void Update () {
-	
-	}
-    string retrieveInfo (int num)
+    public void SaveDataBase()
     {
-        foreach (string str in Database.Keys)
+        StreamWriter outFile = new StreamWriter("Assets\\Database.dat");
+        for (int k=0;k<playerList.Count;k++)
         {
-            if (Database[str].Equals(num))
-                return str;
+            outFile.Write(playerList[k].getFname() + ":" + playerList[k].getLname() + ":" + playerList[k].getScore() + ":" + playerList[k].getEmail() +":" + playerList[k].getPass() + ":" + playerList[k].getId());
+            outFile.WriteLine();
         }
-
-        return "";
+        outFile.Close();
     }
-    //debug
+    public List<Player> SortedData()
+    {
+        List<Player> list = new List<Player>();
+        List<int> myList = new List<int>();
+
+        for (int k=0;k<playerList.Count-1;k++)
+        {
+            myList.Add(playerList[k].getScore());
+            
+        }
+        myList.Sort();
+        myList.Reverse();
+        for (int k=0;k<myList.Count;k++)
+        {
+            for (int i =0;i<playerList.Count;i++)
+            {
+                if (playerList[i].getScore() == myList[k])
+                    list.Add(playerList[i]);
+            }
+        }
+        return list;
+    }
     void OnGUI()
     {
-        /*
-        for (int k = 0; k < sortedDatabase.Count; k++)
-            GUI.Label(new Rect(10, 10 + (k * 24), 2566, 24), sortedDatabase[k].ToString() + " : " + retrieveInfo(sortedDatabase[k]));
-        */
+      //  for (int k = 0; k < playerList.Count; k++)
+        //    GUI.Label(new Rect(10, 10 + (k * 24), 2566, 24), playerList[k].getFname() +" :: " + playerList[k].getScore());
     }
+
+    
 }

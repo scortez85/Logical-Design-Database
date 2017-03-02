@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
     public GameObject[] menus;
+    public Text fName, lName, email, pass, passConfim, male, female;
 
     void closeMenus()
     {
@@ -43,9 +45,12 @@ public class MainMenu : MonoBehaviour {
 	void Start () {
 	
 	}
+    public void getPlayerInfo()
+    {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 }
