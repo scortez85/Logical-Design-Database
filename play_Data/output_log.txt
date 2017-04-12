@@ -22,24 +22,9 @@ Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play
 Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
 Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\MySql.Data.dll (this message is harmless)
 Loading C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\MySql.Data.dll into Unity Child Domain
-- Completed reload, in  0.332 seconds
+- Completed reload, in  0.156 seconds
 Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Steven\Documents\GitHub\Logical-Design-Database\play_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-UnloadTime: 2.598857 ms
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 4a0 -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.347824 ms
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 6184.
-Total: 2.121595 ms (FindLiveObjects: 0.345545 ms CreateObjectMapping: 0.121881 ms MarkObjects: 0.750534 ms  DeleteObjects: 0.902351 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at thirdCam.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
